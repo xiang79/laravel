@@ -89,7 +89,7 @@ class ApiController extends Controller
        $status=$request->status;
        $openid=\Cache::get($status);
        if($openid){
-          return json_encode(['ret'=>1,'font'=>'扫描成功']);
+          return json_encode(['ret'=>1,'font'=>'扫描成功 正在登陆！！请稍后']);
        }else{
          return json_encode(['ret'=>2,'font'=>'未扫描']);
        }   
