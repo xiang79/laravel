@@ -10,12 +10,10 @@ class Wechats extends Controller
 {
 
 
-   public function echostr(Request $request){
-      echo  $echostr=$request->input("echostr");
-   }
-   public function index(){
-      //    $echostr=$request->input("echostr");
-      //  echo $echostr;die; 
+ 
+   public function index(Request $request){
+         $echostr=$request->input("echostr");
+       echo $echostr;
       $xmlStr =file_get_contents("php://input");
       // var_dump($xmlStr);
       file_put_contents("1.txt",$xmlStr);
