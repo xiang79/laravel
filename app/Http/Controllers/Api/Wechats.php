@@ -10,7 +10,7 @@ class Wechats extends Controller
 {
 
 
-   public function ecshostr(){
+   public function ecshostr(Request $request){
       echo  $echostr=$request->input("echostr");
    }
    public function index(){
