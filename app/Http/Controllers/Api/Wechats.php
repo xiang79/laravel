@@ -12,6 +12,7 @@ class Wechats extends Controller
 
  
    public function index(Request $request){
+      echo 111;exit;
          $echostr=$request->input("echostr");
        echo $echostr;die;
       $xmlStr =file_get_contents("php://input");
