@@ -23,9 +23,9 @@
 </body>
 </html>
 <script>
-status=setInterval(status,600000);
+var status=setInterval("status()",600000);
+var status="{{$status}}";
 function status(){
-     var status="{{$status}}";
    $.ajax({
       url:"{{url('/checkWechat')}}",
       data:{status:status},
@@ -41,5 +41,5 @@ function status(){
    });
 }
   
-clearInterval(status);
+//clearInterval(status);
 </script>
