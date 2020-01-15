@@ -24,7 +24,7 @@ Route::group(['middleware' => ['session']],function () {
 //---------------微信带参数的二维码
 Route::any('/wechat','Api\ApiController@WeChat');
 Route::any('/checkWechat','Api\ApiController@checkWechat');
-Route::any('/ecshostr','Api\Wechats@ecshostr');
+Route::any('/echostr','Api\Wechats@echostr');
 
 Route::any('/index','Api\Wechats@index');
 // Route::domain('index.1904.com')->namespace('Index')->group(function () {
