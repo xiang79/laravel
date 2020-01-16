@@ -55,7 +55,7 @@ class ApiController extends Controller
       ];
       /**查询数据库 */
       $adminInfo=AdminLogin::where($where)->first();
-      if(!$adminInfo){
+      if($data['admin_name'] != $adminInfo['admin_name']){
           return back()->withErrors(['用户名错误']);
       }
       $last_accont=0;

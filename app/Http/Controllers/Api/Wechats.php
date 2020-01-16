@@ -25,7 +25,7 @@ class Wechats extends Controller
                   $EventKey=$xmlObj->EventKey;#获取标识
                   //ltrim  截取左边的字符
                   $event=ltrim($EventKey,'qrscene_');
-            if(!empty($event)){
+            if($event){
                   \Cache::put($event,$FromUserName,120);
                   Wechat::responseText($xmlObj,"正在扫码登录，请稍后");
       }
@@ -38,7 +38,7 @@ class Wechats extends Controller
                   $EventKey=(string)$xmlObj->EventKey;#获取标识
                   //ltrim  截取左边的字符
                   $event=ltrim($EventKey,'qrscene_');
-                        if(!empty($event)){
+                 if($event){
                   \Cache::put($event,$FromUserName,120);
                   Wechat::responseText($xmlObj,"正在扫码登录，请稍后");
                }

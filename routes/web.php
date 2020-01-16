@@ -11,25 +11,59 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});  
-
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 Route::any('/login','Api\ApiController@index1');
 Route::any('/login_out','Api\ApiController@login_out');
 Route::group(['middleware' => ['session']],function () {
- Route::any('/show','Api\ApiController@show');
+    Route::any('/show','Api\ApiController@show');
 });
 
 //---------------微信带参数的二维码
 Route::any('/wechat','Api\ApiController@WeChat');
 Route::any('/checkWechat','Api\ApiController@checkWechat');
-Route::any('index','Api\Wechats@index');
+Route::any('indexs','Api\Wechats@index');
+//---------------验签   （token钥匙）
 Route::any('indexDo','Api\ApiController@index');
 Route::any('checkSignature','Api\ApiController@checkSignature');
+//-----------------qq扫码登录
+Route::any('/','Api\IsoController@code');
+Route::any('index','Api\IsoController@index');
+Route::any('getindex','Api\IsoController@getindex');
 
 
-// Route::any('/index','Api\Wechats@index');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Route::domain('index.1904.com')->namespace('Index')->group(function () {
 //     Route::get('/','ApiController@index');
 //     Route::any('/indextest','ApiController@test');  

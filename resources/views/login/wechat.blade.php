@@ -18,7 +18,7 @@
 <div align="center">
 <h2>欢迎使用微信登录</h2>  <p>微信扫描下方二维码，直接登陆</p>
 <img src="{{$resInfo}}"><br>
-<a href="">账号密码登陆</a>
+<a href="/login">账号密码登陆</a>
 </div>  
 </body>
 </html>
