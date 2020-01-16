@@ -10,11 +10,40 @@ use App\Tools\Curl;
 use Session;
 class ApiController extends Controller
 {
- 
+    //验证签名
+    public function index(Request $request){
+        if($this->checkSignature($request)){
+            echo $request->echostr;
+        }else{
+            echo "echostr";
+        }
+    }
+
+//验签
+    private function checkSignature(Request $request){
+        $signature = $request->signature;
+        $timestamp = $request->timestamp;
+        $nonce = $request->nonce;
+
+        $token = "yangyang";
+        $tmpArr = array($token, $timestamp, $nonce);
+        sort($tmpArr, SORT_STRING);
+        $tmpStr = implode( $tmpArr );
+        $tmpStr = sha1( $tmpStr );
+
+        if( $tmpStr == $signature ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
    public function show(){
       echo 'index';
    }
-   public function index(){
+
+   public function index1(){
      return view('login.reglogin');
    }
 

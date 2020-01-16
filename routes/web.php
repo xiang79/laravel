@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });  
 
-Route::any('/login','Api\ApiController@index');
+Route::any('/login','Api\ApiController@index1');
 Route::any('/login_out','Api\ApiController@login_out');
 Route::group(['middleware' => ['session']],function () {
  Route::any('/show','Api\ApiController@show');
@@ -25,6 +25,9 @@ Route::group(['middleware' => ['session']],function () {
 Route::any('/wechat','Api\ApiController@WeChat');
 Route::any('/checkWechat','Api\ApiController@checkWechat');
 Route::any('index','Api\Wechats@index');
+Route::any('indexDo','Api\ApiController@index');
+Route::any('checkSignature','Api\ApiController@checkSignature');
+
 
 // Route::any('/index','Api\Wechats@index');
 // Route::domain('index.1904.com')->namespace('Index')->group(function () {
