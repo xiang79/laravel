@@ -9,7 +9,7 @@ use App\Tools\Wechat;
 class Wechats extends Controller
 {
       public function index(Request $request){
-            // echo 11111;exit;
+            echo 11111;exit;
             $echostr=$request->input("echostr");
             echo $echostr;die;
             $xmlStr =file_get_contents("php://input");
