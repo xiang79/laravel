@@ -35,26 +35,6 @@ class Sessions
             return redirect('/login')->withErrors("您的账号已在其他地方登陆,请尽快修改密码或联系管理员!");
         }
 
-        // if(time() > $adminInfo['created_at']){
-        //     session()->forget('adminInfo');
-        //     return redirect('login');
-        // }else{
-        //     AdminLogin::where(['admin_id'=>$adminInfo['admin_id']])->update(['created_at'=>time()+120]);
-        // }
-
-
-
-        // #防止多终端登录
-        // if(AdminLogin::getSessionId() != $adminInfo->sessionId){
-        //     echo '账号已在其他地方登陆';exit;
-        // }
-        // #20分钟未操作，则提示重新登录
-        // if(time() > AdminLogin::getloginTime() + 1200){
-        //     session()->forget('adminInfo');
-        //     return redirect('login');
-        // }
-        // #一直操作，则更新过期时间
-        // AdminLogin::updateloginTime();
         return $next($request);
      }
 }

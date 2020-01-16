@@ -14,7 +14,7 @@ class Wechats extends Controller
 //            echo $echostr;die;
             $xmlStr =file_get_contents("php://input");
             // var_dump($xmlStr);
-            file_put_contents("1.txt",$xmlStr);
+          // file_put_contents("1.txt",$xmlStr);
             //把xml数据转化成对象
             $xmlObj=simplexml_load_string($xmlStr,'SimpleXMLElement',LIBXML_NOCDATA);
             // var_dump($xmlObj);
