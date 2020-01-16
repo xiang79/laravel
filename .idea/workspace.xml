@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="743b9d2b-5705-47b4-bcd8-dbfc00c0e529" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Wechats.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Wechats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Sessions.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Sessions.php" />
-    </list>
+    <list default="true" id="743b9d2b-5705-47b4-bcd8-dbfc00c0e529" name="默认的" comment="" />
     <ignored path="laravel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -111,8 +107,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="383" />
-    <option name="y" value="89" />
+    <option name="x" value="334" />
+    <option name="y" value="607" />
     <option name="width" value="1537" />
     <option name="height" value="886" />
   </component>
@@ -374,7 +370,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="383" y="89" width="1537" height="886" extended-state="0" />
+    <frame x="334" y="607" width="1537" height="886" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19222903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
